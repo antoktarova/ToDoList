@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB5BC4F42BF6D82F00690DBB /* ListAssembley.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5BC4F32BF6D82F00690DBB /* ListAssembley.swift */; };
-		DB5BC4F62BF6D84100690DBB /* DetailAssembley.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5BC4F52BF6D84100690DBB /* DetailAssembley.swift */; };
+		DB5BC4F42BF6D82F00690DBB /* ListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5BC4F32BF6D82F00690DBB /* ListAssembly.swift */; };
+		DB5BC4F62BF6D84100690DBB /* DetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5BC4F52BF6D84100690DBB /* DetailAssembly.swift */; };
 		DB5BC4FA2BF6DD0D00690DBB /* NotesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5BC4F92BF6DD0D00690DBB /* NotesServiceProtocol.swift */; };
 		DB5BC4FC2BF6DE6400690DBB /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5BC4FB2BF6DE6400690DBB /* UserDefaultsService.swift */; };
 		DB649CEB2BF551F8008BEFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB649CEA2BF551F8008BEFB2 /* AppDelegate.swift */; };
@@ -16,17 +16,25 @@
 		DB649CEF2BF551F8008BEFB2 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB649CEE2BF551F8008BEFB2 /* ListViewController.swift */; };
 		DB649CF42BF551F9008BEFB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB649CF32BF551F9008BEFB2 /* Assets.xcassets */; };
 		DB649CF72BF551F9008BEFB2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DB649CF62BF551F9008BEFB2 /* Base */; };
-		DB649D022BF551F9008BEFB2 /* ToDoListMVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB649D012BF551F9008BEFB2 /* ToDoListMVPTests.swift */; };
 		DB649D0C2BF551F9008BEFB2 /* ToDoListMVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB649D0B2BF551F9008BEFB2 /* ToDoListMVPUITests.swift */; };
 		DB649D0E2BF551F9008BEFB2 /* ToDoListMVPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB649D0D2BF551F9008BEFB2 /* ToDoListMVPUITestsLaunchTests.swift */; };
 		DB649D202BF55287008BEFB2 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB649D1F2BF55287008BEFB2 /* NoteCell.swift */; };
 		DB649D222BF552A9008BEFB2 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB649D212BF552A9008BEFB2 /* NoteModel.swift */; };
 		DB649D242BF552BB008BEFB2 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB649D232BF552BB008BEFB2 /* ListPresenter.swift */; };
-		DB649D262BF552CB008BEFB2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB649D252BF552CB008BEFB2 /* Router.swift */; };
 		DB649D282BF552EA008BEFB2 /* ArrayNotesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB649D272BF552EA008BEFB2 /* ArrayNotesService.swift */; };
 		DB649D2B2BF55E6C008BEFB2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB649D2A2BF55E6C008BEFB2 /* DetailViewController.swift */; };
 		DB649D2F2BF55EF7008BEFB2 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB649D2E2BF55EF7008BEFB2 /* DetailPresenter.swift */; };
-		DB649D312BF571C8008BEFB2 /* AssembleyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB649D302BF571C8008BEFB2 /* AssembleyProtocol.swift */; };
+		DB649D312BF571C8008BEFB2 /* AssemblyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB649D302BF571C8008BEFB2 /* AssemblyProtocol.swift */; };
+		DB69206F2BFE9D5300661A31 /* ArrayNoteRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB69206E2BFE9D5300661A31 /* ArrayNoteRepositoryTests.swift */; };
+		DB6920712BFF204B00661A31 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6920702BFF204B00661A31 /* ListRouter.swift */; };
+		DB6920732BFF29AF00661A31 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6920722BFF29AF00661A31 /* DetailRouter.swift */; };
+		DB6920762BFF4AF100661A31 /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = DB6920752BFF4AF100661A31 /* InlineSnapshotTesting */; };
+		DB6920782BFF4AF100661A31 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = DB6920772BFF4AF100661A31 /* SnapshotTesting */; };
+		DB69207C2BFF5D6E00661A31 /* UserDefaultsRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB69207B2BFF5D6E00661A31 /* UserDefaultsRepositoryTest.swift */; };
+		DB6920802BFF626000661A31 /* ListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB69207F2BFF626000661A31 /* ListPresenterTest.swift */; };
+		DB7A5D962C001320007D934F /* ListViewSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A5D952C001320007D934F /* ListViewSnapshotTest.swift */; };
+		DB7A5D9C2C0013CB007D934F /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = DB7A5D9B2C0013CB007D934F /* InlineSnapshotTesting */; };
+		DB7A5D9E2C0013CB007D934F /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = DB7A5D9D2C0013CB007D934F /* SnapshotTesting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DB5BC4F32BF6D82F00690DBB /* ListAssembley.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAssembley.swift; sourceTree = "<group>"; };
-		DB5BC4F52BF6D84100690DBB /* DetailAssembley.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembley.swift; sourceTree = "<group>"; };
+		DB5BC4F32BF6D82F00690DBB /* ListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAssembly.swift; sourceTree = "<group>"; };
+		DB5BC4F52BF6D84100690DBB /* DetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembly.swift; sourceTree = "<group>"; };
 		DB5BC4F92BF6DD0D00690DBB /* NotesServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesServiceProtocol.swift; sourceTree = "<group>"; };
 		DB5BC4FB2BF6DE6400690DBB /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		DB649CE72BF551F8008BEFB2 /* ToDoListMVPLocal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoListMVPLocal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,18 +67,22 @@
 		DB649CF62BF551F9008BEFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB649CF82BF551F9008BEFB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB649CFD2BF551F9008BEFB2 /* ToDoListMVPLocalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListMVPLocalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB649D012BF551F9008BEFB2 /* ToDoListMVPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListMVPTests.swift; sourceTree = "<group>"; };
 		DB649D072BF551F9008BEFB2 /* ToDoListMVPLocalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListMVPLocalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB649D0B2BF551F9008BEFB2 /* ToDoListMVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListMVPUITests.swift; sourceTree = "<group>"; };
 		DB649D0D2BF551F9008BEFB2 /* ToDoListMVPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListMVPUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DB649D1F2BF55287008BEFB2 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		DB649D212BF552A9008BEFB2 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 		DB649D232BF552BB008BEFB2 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
-		DB649D252BF552CB008BEFB2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DB649D272BF552EA008BEFB2 /* ArrayNotesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayNotesService.swift; sourceTree = "<group>"; };
 		DB649D2A2BF55E6C008BEFB2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DB649D2E2BF55EF7008BEFB2 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
-		DB649D302BF571C8008BEFB2 /* AssembleyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssembleyProtocol.swift; sourceTree = "<group>"; };
+		DB649D302BF571C8008BEFB2 /* AssemblyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyProtocol.swift; sourceTree = "<group>"; };
+		DB69206E2BFE9D5300661A31 /* ArrayNoteRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayNoteRepositoryTests.swift; sourceTree = "<group>"; };
+		DB6920702BFF204B00661A31 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		DB6920722BFF29AF00661A31 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		DB69207B2BFF5D6E00661A31 /* UserDefaultsRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositoryTest.swift; sourceTree = "<group>"; };
+		DB69207F2BFF626000661A31 /* ListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterTest.swift; sourceTree = "<group>"; };
+		DB7A5D952C001320007D934F /* ListViewSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewSnapshotTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB7A5D9C2C0013CB007D934F /* InlineSnapshotTesting in Frameworks */,
+				DB7A5D9E2C0013CB007D934F /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6920762BFF4AF100661A31 /* InlineSnapshotTesting in Frameworks */,
+				DB6920782BFF4AF100661A31 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,18 +124,11 @@
 			path = NotesService;
 			sourceTree = "<group>";
 		};
-		DB5BC4FD2BF6DECB00690DBB /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				DB649D252BF552CB008BEFB2 /* Router.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
 		DB649CDE2BF551F8008BEFB2 = {
 			isa = PBXGroup;
 			children = (
 				DB649CE92BF551F8008BEFB2 /* ToDoListMVP */,
+				DB7A5D942C001275007D934F /* SnapshotTests */,
 				DB649D002BF551F9008BEFB2 /* ToDoListMVPTests */,
 				DB649D0A2BF551F9008BEFB2 /* ToDoListMVPUITests */,
 				DB649CE82BF551F8008BEFB2 /* Products */,
@@ -139,7 +148,7 @@
 		DB649CE92BF551F8008BEFB2 /* ToDoListMVP */ = {
 			isa = PBXGroup;
 			children = (
-				DB5BC4FD2BF6DECB00690DBB /* Router */,
+				DB649D212BF552A9008BEFB2 /* NoteModel.swift */,
 				DB5BC4F82BF6DCE800690DBB /* NotesService */,
 				DB649D322BF5745C008BEFB2 /* Assembley */,
 				DB649D1A2BF551FF008BEFB2 /* ListModule */,
@@ -156,7 +165,9 @@
 		DB649D002BF551F9008BEFB2 /* ToDoListMVPTests */ = {
 			isa = PBXGroup;
 			children = (
-				DB649D012BF551F9008BEFB2 /* ToDoListMVPTests.swift */,
+				DB69206E2BFE9D5300661A31 /* ArrayNoteRepositoryTests.swift */,
+				DB69207B2BFF5D6E00661A31 /* UserDefaultsRepositoryTest.swift */,
+				DB69207F2BFF626000661A31 /* ListPresenterTest.swift */,
 			);
 			path = ToDoListMVPTests;
 			sourceTree = "<group>";
@@ -173,19 +184,12 @@
 		DB649D1A2BF551FF008BEFB2 /* ListModule */ = {
 			isa = PBXGroup;
 			children = (
-				DB649D1B2BF5521C008BEFB2 /* Model */,
 				DB649D1C2BF55221008BEFB2 /* View */,
-				DB649D1D2BF55230008BEFB2 /* Presenter */,
+				DB649D232BF552BB008BEFB2 /* ListPresenter.swift */,
+				DB6920702BFF204B00661A31 /* ListRouter.swift */,
+				DB5BC4F32BF6D82F00690DBB /* ListAssembly.swift */,
 			);
 			path = ListModule;
-			sourceTree = "<group>";
-		};
-		DB649D1B2BF5521C008BEFB2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				DB649D212BF552A9008BEFB2 /* NoteModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		DB649D1C2BF55221008BEFB2 /* View */ = {
@@ -197,47 +201,31 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		DB649D1D2BF55230008BEFB2 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				DB649D232BF552BB008BEFB2 /* ListPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
 		DB649D292BF55E24008BEFB2 /* NotesDetailModule */ = {
 			isa = PBXGroup;
 			children = (
-				DB649D2D2BF55EC9008BEFB2 /* Presenter */,
-				DB649D2C2BF55EC1008BEFB2 /* View */,
+				DB649D2A2BF55E6C008BEFB2 /* DetailViewController.swift */,
+				DB649D2E2BF55EF7008BEFB2 /* DetailPresenter.swift */,
+				DB5BC4F52BF6D84100690DBB /* DetailAssembly.swift */,
+				DB6920722BFF29AF00661A31 /* DetailRouter.swift */,
 			);
 			path = NotesDetailModule;
-			sourceTree = "<group>";
-		};
-		DB649D2C2BF55EC1008BEFB2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DB649D2A2BF55E6C008BEFB2 /* DetailViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DB649D2D2BF55EC9008BEFB2 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				DB649D2E2BF55EF7008BEFB2 /* DetailPresenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		DB649D322BF5745C008BEFB2 /* Assembley */ = {
 			isa = PBXGroup;
 			children = (
-				DB649D302BF571C8008BEFB2 /* AssembleyProtocol.swift */,
-				DB5BC4F32BF6D82F00690DBB /* ListAssembley.swift */,
-				DB5BC4F52BF6D84100690DBB /* DetailAssembley.swift */,
+				DB649D302BF571C8008BEFB2 /* AssemblyProtocol.swift */,
 			);
 			path = Assembley;
+			sourceTree = "<group>";
+		};
+		DB7A5D942C001275007D934F /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB7A5D952C001320007D934F /* ListViewSnapshotTest.swift */,
+			);
+			path = SnapshotTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +244,8 @@
 			dependencies = (
 			);
 			name = ToDoListMVPLocal;
+			packageProductDependencies = (
+			);
 			productName = ToDoListMVP;
 			productReference = DB649CE72BF551F8008BEFB2 /* ToDoListMVPLocal.app */;
 			productType = "com.apple.product-type.application";
@@ -274,6 +264,10 @@
 				DB649CFF2BF551F9008BEFB2 /* PBXTargetDependency */,
 			);
 			name = ToDoListMVPLocalTests;
+			packageProductDependencies = (
+				DB7A5D9B2C0013CB007D934F /* InlineSnapshotTesting */,
+				DB7A5D9D2C0013CB007D934F /* SnapshotTesting */,
+			);
 			productName = ToDoListMVPTests;
 			productReference = DB649CFD2BF551F9008BEFB2 /* ToDoListMVPLocalTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -292,6 +286,10 @@
 				DB649D092BF551F9008BEFB2 /* PBXTargetDependency */,
 			);
 			name = ToDoListMVPLocalUITests;
+			packageProductDependencies = (
+				DB6920752BFF4AF100661A31 /* InlineSnapshotTesting */,
+				DB6920772BFF4AF100661A31 /* SnapshotTesting */,
+			);
 			productName = ToDoListMVPUITests;
 			productReference = DB649D072BF551F9008BEFB2 /* ToDoListMVPLocalUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -328,6 +326,9 @@
 				Base,
 			);
 			mainGroup = DB649CDE2BF551F8008BEFB2;
+			packageReferences = (
+				DB6920742BFF4AF100661A31 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = DB649CE82BF551F8008BEFB2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -370,20 +371,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB649D312BF571C8008BEFB2 /* AssembleyProtocol.swift in Sources */,
+				DB649D312BF571C8008BEFB2 /* AssemblyProtocol.swift in Sources */,
+				DB6920732BFF29AF00661A31 /* DetailRouter.swift in Sources */,
 				DB649D2B2BF55E6C008BEFB2 /* DetailViewController.swift in Sources */,
-				DB5BC4F62BF6D84100690DBB /* DetailAssembley.swift in Sources */,
+				DB5BC4F62BF6D84100690DBB /* DetailAssembly.swift in Sources */,
+				DB6920712BFF204B00661A31 /* ListRouter.swift in Sources */,
 				DB649D202BF55287008BEFB2 /* NoteCell.swift in Sources */,
 				DB649CEF2BF551F8008BEFB2 /* ListViewController.swift in Sources */,
 				DB649D2F2BF55EF7008BEFB2 /* DetailPresenter.swift in Sources */,
 				DB649D222BF552A9008BEFB2 /* NoteModel.swift in Sources */,
-				DB649D262BF552CB008BEFB2 /* Router.swift in Sources */,
 				DB649CEB2BF551F8008BEFB2 /* AppDelegate.swift in Sources */,
 				DB649D242BF552BB008BEFB2 /* ListPresenter.swift in Sources */,
 				DB649CED2BF551F8008BEFB2 /* SceneDelegate.swift in Sources */,
 				DB649D282BF552EA008BEFB2 /* ArrayNotesService.swift in Sources */,
 				DB5BC4FC2BF6DE6400690DBB /* UserDefaultsService.swift in Sources */,
-				DB5BC4F42BF6D82F00690DBB /* ListAssembley.swift in Sources */,
+				DB5BC4F42BF6D82F00690DBB /* ListAssembly.swift in Sources */,
 				DB5BC4FA2BF6DD0D00690DBB /* NotesServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,7 +394,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB649D022BF551F9008BEFB2 /* ToDoListMVPTests.swift in Sources */,
+				DB69207C2BFF5D6E00661A31 /* UserDefaultsRepositoryTest.swift in Sources */,
+				DB6920802BFF626000661A31 /* ListPresenterTest.swift in Sources */,
+				DB69206F2BFE9D5300661A31 /* ArrayNoteRepositoryTests.swift in Sources */,
+				DB7A5D962C001320007D934F /* ListViewSnapshotTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,6 +720,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB6920742BFF4AF100661A31 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.16.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB6920752BFF4AF100661A31 /* InlineSnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB6920742BFF4AF100661A31 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = InlineSnapshotTesting;
+		};
+		DB6920772BFF4AF100661A31 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB6920742BFF4AF100661A31 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+		DB7A5D9B2C0013CB007D934F /* InlineSnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB6920742BFF4AF100661A31 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = InlineSnapshotTesting;
+		};
+		DB7A5D9D2C0013CB007D934F /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB6920742BFF4AF100661A31 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB649CDF2BF551F8008BEFB2 /* Project object */;
 }

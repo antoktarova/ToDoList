@@ -1,7 +1,11 @@
 import UIKit
 
+protocol DetailViewProtocol: AnyObject {
+    func setNote(note: String)
+    func showNewNotes()
+}
+
 class DetailViewController: UIViewController, DetailViewProtocol {
-    
     private var presenter: DetailViewPresenterProtocol
     
     private let commonStack = UIStackView()
@@ -21,41 +25,18 @@ class DetailViewController: UIViewController, DetailViewProtocol {
         super.viewDidLoad()
         view.backgroundColor = .systemIndigo
         
-        configureCommonStack()
-        presenter.showNote()
+        configureLayout()
+        configureUI()
     }
     
-    private func configureCommonStack() {
-        view.addSubview(commonStack)
-        
-        commonStack.axis = .vertical
-        commonStack.spacing = 16
-        
-        configureTitleLabel()
-        configureField()
-        configureSaveButton()
-        commonStack.addArrangedSubview(titleLabel)
-        commonStack.addArrangedSubview(field)
-        commonStack.addArrangedSubview(saveButton)
-        
-        commonStack.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            commonStack.topAnchor.constraint(equalTo: view.topAnchor, constant: 130),
-            commonStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
-            commonStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            commonStack.heightAnchor.constraint(equalToConstant: 300)
-        ])
-    }
-    
-    private func configureTitleLabel() {
+    private func configureUI() {
         titleLabel.font = UIFont.systemFont(ofSize: 25)
         titleLabel.backgroundColor = .white
         titleLabel.layer.cornerRadius = 16
         titleLabel.clipsToBounds = true
         titleLabel.textAlignment = .center
-    }
-    
-    private func configureField() {
+        titleLabel.text = "экран редактирования"
+        
         field.backgroundColor = .white
         field.layer.cornerRadius = 16
         
@@ -67,18 +48,33 @@ class DetailViewController: UIViewController, DetailViewProtocol {
             field.textColor = UIColor.lightGray
         }
         
-        field.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            field.heightAnchor.constraint(equalToConstant: 200)
-        ])
-    }
-    
-    private func configureSaveButton() {
         saveButton.setTitle("сохранить", for: .normal)
         saveButton.setTitleColor(UIColor.black, for: .normal)
         saveButton.backgroundColor = .white
         saveButton.layer.cornerRadius = 16
         saveButton.addTarget(self, action: #selector(saveButtonAction), for: .touchUpInside)
+        
+        commonStack.axis = .vertical
+        commonStack.spacing = 16
+        commonStack.addArrangedSubview(titleLabel)
+        commonStack.addArrangedSubview(field)
+        commonStack.addArrangedSubview(saveButton)
+    }
+    
+    private func configureLayout() {
+        view.addSubview(commonStack)
+        commonStack.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            commonStack.topAnchor.constraint(equalTo: view.topAnchor, constant: 130),
+            commonStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            commonStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            commonStack.heightAnchor.constraint(equalToConstant: 300)
+        ])
+        
+        field.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            field.heightAnchor.constraint(equalToConstant: 200)
+        ])
     }
     
     func setNote(note: String) {
@@ -86,17 +82,18 @@ class DetailViewController: UIViewController, DetailViewProtocol {
     }
     
     func showNewNotes() {
-        self.dismiss(animated: true)
+        dismiss(animated: true)
     }
     
     @objc private func saveButtonAction() {
         let note = NoteModel(
             id: self.note?.id ?? UUID(),
-            title: self.field.text ?? ""
+            title: field.text ?? ""
         )
         presenter.saveNote(note: note)
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

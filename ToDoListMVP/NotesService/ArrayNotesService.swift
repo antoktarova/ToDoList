@@ -1,37 +1,49 @@
 import UIKit
 
+enum Services {
+    static let userDefaults = UserDefaultsService()
+    static let array = ArrayNoteService()
+}
+
 class ArrayNoteService: NotesServiceProtocol {
-    
-    static let shared = ArrayNoteService()
     private var notesList: [NoteModel] = []
+    private let syncQueue = DispatchQueue(label: "arrayService")
     
-    private init() {}
+    init() {}
     
-    func getNotes() -> [NoteModel] {
-        return notesList
+    func getNotes(completion: @escaping ([NoteModel]) -> ()) {
+        syncQueue.async { [weak self] in
+            guard let self else { return }
+            completion(notesList)
+        }
     }
     
     func appendOrUpdate(note: NoteModel) {
-        var targetIndex: Int? = nil
-        for (index, element) in notesList.enumerated() {
-            if element.id == note.id {
-                targetIndex = index
+        syncQueue.async { [weak self] in
+            guard let self else { return }
+            var targetIndex: Int? = nil
+            for (index, element) in notesList.enumerated() {
+                if element.id == note.id {
+                    targetIndex = index
+                }
             }
-        }
-        
-        if let targetIndex = targetIndex {
-            notesList[targetIndex] = note
-        } else {
-            notesList.append(note)
+            
+            if let targetIndex = targetIndex {
+                notesList[targetIndex] = note
+            } else {
+                notesList.append(note)
+            }
         }
     }
     
     func deleteTask(note: NoteModel) {
-        for (index, element) in notesList.enumerated() {
-            if element.id == note.id {
-                notesList.remove(at: index)
+        syncQueue.async { [weak self] in
+            guard let self else { return }
+            for (index, element) in notesList.enumerated() {
+                if element.id == note.id {
+                    notesList.remove(at: index)
+                }
             }
         }
     }
 }
-

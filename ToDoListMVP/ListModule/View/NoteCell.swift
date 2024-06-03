@@ -2,7 +2,6 @@ import Foundation
 import UIKit
 
 class NoteCell: UITableViewCell {
-    
     private let stack = UIStackView()
     private let title = UILabel()
     private let deleteButton = UIButton()
@@ -10,33 +9,14 @@ class NoteCell: UITableViewCell {
     var deleteButonTapped: (()->())? = nil
     var updateButonTapped: (()->())? = nil
     
-    func configureCell(note: NoteModel) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        configureLayout()
+    }
+    
+    func configureLayout() {
         addSubview(stack)
-        
-        title.font = UIFont.systemFont(ofSize: 17)
-        title.textColor = .gray
-        title.text = note.title
-        
-        deleteButton.setImage(UIImage(systemName: "trash"), for: .normal)
-        deleteButton.addTarget(self, action:#selector(deletelButtonAction) , for: .touchUpInside)
-        deleteButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            deleteButton.widthAnchor.constraint(equalToConstant: 50)
-        ])
-        
-        updateButton.setImage(UIImage(systemName: "pencil.and.scribble"), for: .normal)
-        updateButton.addTarget(self, action:#selector(updateButtonAction) , for: .touchUpInside)
-        updateButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            updateButton.widthAnchor.constraint(equalToConstant: 50)
-        ])
-        
-        stack.axis = .horizontal
-        stack.spacing = 4
-        stack.addArrangedSubview(deleteButton)
-        stack.addArrangedSubview(title)
-        stack.addArrangedSubview(updateButton)
-        
         stack.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             stack.trailingAnchor.constraint(equalTo: trailingAnchor),
@@ -44,8 +24,36 @@ class NoteCell: UITableViewCell {
             stack.topAnchor.constraint(equalTo: topAnchor),
             stack.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+        
+        deleteButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            deleteButton.widthAnchor.constraint(equalToConstant: 50)
+        ])
+        
+        updateButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            updateButton.widthAnchor.constraint(equalToConstant: 50)
+        ])
     }
     
+    func configureUI(note: NoteModel) {
+        title.font = UIFont.systemFont(ofSize: 17)
+        title.textColor = .gray
+        title.text = note.title
+        
+        deleteButton.setImage(UIImage(systemName: "trash"), for: .normal)
+        deleteButton.addTarget(self, action: #selector(deletelButtonAction), for: .touchUpInside)
+
+        updateButton.setImage(UIImage(systemName: "pencil.and.scribble"), for: .normal)
+        updateButton.addTarget(self, action: #selector(updateButtonAction), for: .touchUpInside)
+        
+        stack.axis = .horizontal
+        stack.spacing = 4
+        stack.addArrangedSubview(deleteButton)
+        stack.addArrangedSubview(title)
+        stack.addArrangedSubview(updateButton)
+    }
+
     @objc private func deletelButtonAction() {
         deleteButonTapped?()
     }
@@ -58,10 +66,7 @@ class NoteCell: UITableViewCell {
         title.text = ""
     }
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-    
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
